@@ -1,0 +1,3 @@
+Sample(Sample& sample){
+		v = 2 * sample.v;
+	}
