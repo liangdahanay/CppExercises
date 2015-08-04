@@ -230,7 +230,7 @@ BigInteger operator/(const BigInteger& i1, const BigInteger& i2){
 
 	//buffer for result
 	char* res = new char[i1.size + 2];
-	memset(res, '0', i1.size);
+	memset(res, '0', i1.size+1);
 	res[i1.size+1] = '\0';
 
 	for (int i = 0; i <= diff; i++){
@@ -240,21 +240,35 @@ BigInteger operator/(const BigInteger& i1, const BigInteger& i2){
 		for (int j = 0; j < i2.size; j++){
 			i2NumBuffer[i + j] = i2Num[j];
 		}
-		int count = 0;
-		while (BigInteger::Compare(i1Num, i2NumBuffer, i1.size) > 0){
+		
+		//cout << i2NumBuffer << endl;
+
+		char count = 0;
+		while (BigInteger::Compare(i1Num, i2NumBuffer, i1.size) >= 0){
 			BigInteger::subtractHelper(i1Num, i1.size, i2NumBuffer + i, i1.size - i);
 			count++;
 		}
-		char* baseBuffer = new char[diff + 1 - i + 1];
-		baseBuffer[diff + 1 - i] = '\0';
+
+		//cout << i1Num << endl;
+
+		int baseSize = diff + 1 - i;
+		//cout << baseSize << endl;
+
+		char* baseBuffer = new char[baseSize+1];
+		memset(baseBuffer, '0', baseSize);
+		baseBuffer[baseSize] = '\0';
 		baseBuffer[0] = count + '0';
-		for (int j = 1; j < diff - i; j++){
-			baseBuffer[j] = '0';
-		}
-		BigInteger::addHelper(res, i1.size+1, baseBuffer, diff + 1 - i);
+		
+		//cout << baseBuffer << " " <<strlen(baseBuffer) << endl;
+		//cout << count << endl;
+	
+		//cout << res << endl;
+		BigInteger::addHelper(res, i1.size+1, baseBuffer, baseSize);
 
 		delete[] baseBuffer;
 	}
+//12345
+//00012
 
 	delete[] i2NumBuffer;
 	delete[] i1Num;
@@ -291,8 +305,6 @@ int main(int argc, char* argv[]){
 
 	
 
-	getchar();
-	getchar();
 
 	return 0;
 }
