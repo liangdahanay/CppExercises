@@ -13,15 +13,32 @@ public:
 	
 	MyString(const MyString& mStr):string(mStr){}
 	
-	MyString(string str):string(str){} 
+	MyString(string str):string(str){
+		cout << "construct from string" << endl;
+	} 
 	
 	MyString operator() (int i, int j){
 		return MyString(string::substr(i, j));
 	}
 	
 };
+/*
+class Base{
+	
+};
 
-
+class Derive: public Base{
+public:	
+	Derive(){}
+	
+	Derive(const Base& b):Base(){
+		cout<<"Construct Derive from Base" << endl;
+	}
+};
+void func(Derive b){
+	
+}
+*/
 int CompareString( const void * e1, const void * e2) {
     MyString * s1 = (MyString * ) e1;
     MyString * s2 = (MyString * ) e2;
@@ -30,7 +47,13 @@ int CompareString( const void * e1, const void * e2) {
     else if( *s1 > *s2 ) return 1;
 }
 int main() {
-    MyString s1("abcd-"),s2,s3("efgh-"),s4(s1);
+	
+	/*
+	Base b;
+	func(b);
+	*/
+	
+	MyString s1("abcd-"),s2,s3("efgh-"),s4(s1);
     
     MyString SArray[4] = {"big","me","about","take"};
     cout << "1. " << s1 << s2 << s3<< s4<< endl;
@@ -40,7 +63,8 @@ int main() {
     cout << "3. " << s2 << endl;
     cout << "4. " << s3 << endl;
     cout << "5. " << s4 << endl;
-    cout << "6. " << s1[2] << endl;
+    
+	cout << "6. " << s1[2] << endl;
     s2 = s1;    s1 = "ijkl-";
     s1[2] = 'A' ;
     cout << "7. " << s2 << endl;
@@ -59,6 +83,6 @@ int main() {
     cout << s1(0,4) << endl;
     //输出s1从下标为5开始长度为10的子串
     cout << s1(5,10) << endl;
- 	   
-    return 0;
+ 	
+	return 0;
 }
