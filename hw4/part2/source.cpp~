@@ -280,10 +280,8 @@ int main(int argc, char** argv){
 				}else if(headRed.genDragon(time)){
 						
 				}else{
-					if(!flagRed){
-						cout << setfill('0')<< setw(3) << time << " red headquarter stops making warriors"<< endl;	
-						flagRed = true;
-					}
+					if(!flagRed) cout << setfill('0')<< setw(3) << time << " red headquarter stops making warriors"<< endl;	
+					flagRed = true;
 				}
 				
 				if(headBlue.genLion(time)){
@@ -297,10 +295,8 @@ int main(int argc, char** argv){
 				}else if(headBlue.genWolf(time)){
 						
 				}else{
-					if(!flagBlue){
-						cout << setfill('0')<< setw(3) << time << " blue headquarter stops making warriors"<< endl;	
-						flagBlue = true;
-					}
+					if(!flagBlue) cout << setfill('0')<< setw(3) << time << " blue headquarter stops making warriors"<< endl;	
+					flagBlue = true;
 				}
 
 			}else if(time%5==1){
@@ -315,10 +311,8 @@ int main(int argc, char** argv){
 				}else if(headRed.genIceman(time)){
 					
 				}else {
-					if(!flagRed) {
-						cout << setfill('0')<< setw(3) << time << " red headquarter stops making warriors"<< endl;	
-						flagRed = true;
-					}	
+					if(!flagRed) cout << setfill('0')<< setw(3) << time << " red headquarter stops making warriors"<< endl;	
+					flagRed = true;
 				}
 				
 				if(headBlue.genDragon(time)){
@@ -332,10 +326,8 @@ int main(int argc, char** argv){
 				}else if(headBlue.genLion(time)){
 					
 				}else {
-					if(!flagBlue){
-						cout << setfill('0')<< setw(3) << time << " blue headquarter stops making warriors"<< endl;	
-						flagBlue = true;
-					}
+					if(!flagBlue) cout << setfill('0')<< setw(3) << time << " blue headquarter stops making warriors"<< endl;	
+					flagBlue = true;
 				}
 				
 			}else if(time%5==2){
@@ -350,11 +342,8 @@ int main(int argc, char** argv){
 				}else if(headRed.genLion(time)){
 				
 				}else {
-					if(!flagRed) 
-					{
-						cout << setfill('0')<< setw(3) << time << " red headquarter stops making warriors"<< endl;	
-						flagRed = true;
-					}
+					if(!flagRed) cout << setfill('0')<< setw(3) << time << " red headquarter stops making warriors"<< endl;	
+					flagRed = true;
 				}
 				
 				if(headBlue.genNinja(time)){
@@ -368,10 +357,8 @@ int main(int argc, char** argv){
 				}else if(headBlue.genDragon(time)){
 				
 				}else {
-					if(!flagBlue) {
-						cout << setfill('0')<< setw(3) << time << " blue headquarter stops making warriors"<< endl;	
-						flagBlue = true;
-					}	
+					if(!flagBlue) cout << setfill('0')<< setw(3) << time << " blue headquarter stops making warriors"<< endl;	
+					flagBlue = true;
 				}
 			}else if(time%5==3){
 				if(headRed.genNinja(time)){
@@ -385,10 +372,8 @@ int main(int argc, char** argv){
 				}else if(headRed.genWolf(time)){
 						
 				}else {
-					if(!flagRed) {
-						cout << setfill('0')<< setw(3) << time << " red headquarter stops making warriors"<< endl;	
-						flagRed = true;
-					}	
+					if(!flagRed) cout << setfill('0')<< setw(3) << time << " red headquarter stops making warriors"<< endl;	
+					flagRed = true;
 				}
 				
 				if(headBlue.genIceman(time)){
@@ -402,10 +387,8 @@ int main(int argc, char** argv){
 				}else if(headBlue.genNinja(time)){
 						
 				}else {
-					if(!flagBlue) {
-						cout << setfill('0')<< setw(3) << time << " blue headquarter stops making warriors"<< endl;	
-						flagBlue = true;
-					}
+					if(!flagBlue) cout << setfill('0')<< setw(3) << time << " blue headquarter stops making warriors"<< endl;	
+					flagBlue = true;
 				}
 			}else if(time%5==4){
 				if(headRed.genDragon(time)){
@@ -419,10 +402,8 @@ int main(int argc, char** argv){
 				}else if(headRed.genNinja(time)){
 						
 				}else  {
-					if(!flagRed) {
-						cout << setfill('0')<< setw(3) << time << " red headquarter stops making warriors"<< endl;	
-						flagRed = true;
-					}
+					if(!flagRed) cout << setfill('0')<< setw(3) << time << " red headquarter stops making warriors"<< endl;	
+					flagRed = true;
 				}
 				
 				if(headBlue.genWolf(time)){
@@ -436,10 +417,8 @@ int main(int argc, char** argv){
 				}else if(headBlue.genIceman(time)){
 						
 				}else {
-					if(!flagBlue) {
-						cout << setfill('0')<< setw(3) << time << " blue headquarter stops making warriors"<< endl;	
-						flagBlue = true;
-					}
+					if(!flagBlue) cout << setfill('0')<< setw(3) << time << " blue headquarter stops making warriors"<< endl;	
+					flagBlue = true;
 				}
 			}
 
